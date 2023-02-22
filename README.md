@@ -4,10 +4,12 @@ Source Code:
 from MSU bootcamp Module 3 challenge
 and from https://youtu.be/v2jfGo7ztm8 tutorial
 
-SSH key git@github.com:strait2thepoint/Mod_3_pwGen.git
+
 
 Deployment:
+SSH key git@github.com:strait2thepoint/Mod_3_pwGen.git
 
+https://strait2thepoint.github.io/Mod_3_pwGen/
 
 ![Laura's code](../Mod_3_pwGen/Assets/Laura's%20code.png)
 
