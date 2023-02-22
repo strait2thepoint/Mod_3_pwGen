@@ -1,24 +1,24 @@
 //Possible characters for password
-//var charLength = 8;
-var lowerCaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",];
-var upperCaseArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
-var specCharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "<", ">", "(", ")", "{", "}", "/",];
-var numArr = ["0","1","2","3","4","5","6","7","8","9",];
-//var passArr = [lowerCaseArr + upperCaseArr + specCharArr + numArr];
+//let charLength = 8;
+let lowerCaseArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",];
+let upperCaseArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+let specCharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "<", ">", "(", ")", "{", "}", "/",];
+let numArr = ["0","1","2","3","4","5","6","7","8","9",];
+//let passArr = [lowerCaseArr + upperCaseArr + specCharArr + numArr];
 
 // id=generate>>#generate 
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var goodPrompts = getPrompts();  // boolean
-  var passwordText = document.querySelector("#password");
+  let goodPrompts = getPrompts();  // boolean
+  let passwordText = document.querySelector("#password");
 
   if (goodPrompts){
-  var genPassword = generatePassword();
+  let genPassword = generatePassword();
     passwordText.value = genPassword;
   }else{
     passwordText.value = "";
@@ -56,9 +56,9 @@ function getPrompts() {
 
  //generate password
 function generatePassword() {
- var password = "";
- for(var i = 0; i <charLength; i++){ //for loop using i
-  var ranValue = Math.floor(Math.random() * passArr.length);  //this is where I'm going to use the math.random and floor thingies
+ let password = "";
+ for(let i = 0; i <charLength; i++){ //for loop using i
+  let ranValue = Math.floor(Math.random() * passArr.length);  //this is where I'm going to use the math.random and floor thingies
   password = password + passArr[ranValue];
  }
  return password;  //display password to page
@@ -67,7 +67,7 @@ function generatePassword() {
 //THINGS I WILL USE TO MAKE THIS WORK:
 //arrays- num 0-9?  letters a-z, A-Z, spec char
 //math.random and floor
-//var index = Math.floor(Math.random() * options.length);<---------  Don't forget to use this
+//let index = Math.floor(Math.random() * options.length);<---------  Don't forget to use this
 //  window.alert();
 //confirm
 
